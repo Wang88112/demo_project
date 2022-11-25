@@ -1,36 +1,51 @@
 package com.example.demo_project;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo_project.entity.Bird;
 import com.example.demo_project.entity.Person;
-import com.example.demo_project.service.ifs.Active;
-import com.example.demo_project.service.ifs.PersonService;
+import com.example.demo_project.repository.PersonDao;
+
 
 @SpringBootTest
 class DemoProjectApplicationTests {
+	
+//	@Autowired
+//	private PersonDao personDao;
+//	
+//	@Test
+//	public void collectionTest() {
+//		List<Person> result = personDao.findByCity("Taipei");
+//		System.out.println(result.size());
+//	}
 
-	@Autowired
-	private PersonService personService; //¤¶­±
+//	@Autowired
+//	private BankService bankService;
 	
-	@Test
-	public void contextLoads() {
-		Person per = personService.getPersonInfo("123123");
-		System.out.println(per.getId());
-	}
+//	@Autowired
+//	private BankController bankController;
 	
-	@Autowired
-	private Active active; //¤¶­±
+//	@Test
+//	public void contextLoads() {
+//		Bank bank = new Bank();
+//	    bankService.getAmount(bank);
+//	    bankService.deposit(bank, 10);
+//	    bankService.withdraw(bank, 600000);
+//	}
 	
-	@Test
-	public void homeWork() {
-		Bird bird = active.fly("QQQ", 1);
-		System.out.println(bird.getName());
-		System.out.println(bird.getAge());
-		
-		
-	}
-
+//
+//	@Test
+//	public void bankControllerTest(){
+//		BankReq req = new BankReq();
+//		req.setAccount("");
+//		BankRes res = bankController.getAmount(req);
+//		System.out.println(res.getBank().getAccount());
+//		System.out.println(res.getBank().getAmount());
+//		System.out.println(res.getMessage()); 
+//	}
+//	
+	
 }

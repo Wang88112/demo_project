@@ -1,13 +1,17 @@
 package com.example.demo_project.service.ifs;
 
+import java.util.List;
+
 import com.example.demo_project.entity.Person;
 
 public interface PersonService {
-    public Person getPersonInfo(String id);  //不同package
-        
-//    default Person getPersonInfo2() {
-//    	return new Person();
-//    }                          //只有權限是default才能實作它
-    
-        
+	
+	public List<Person> getPersonInfo();  //所有人資料     
+	
+	public Person getPersonInfoById(String id);    //要個人id
+	
+	public List<Person> getPersonInfoByAgeLargerThan(int age);    //比較年齡，筆輸入年齡大的列出
+	
+	public List<Person> findByNameAndAge(String name, int age);  //年齡姓名一樣
+
 }

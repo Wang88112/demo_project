@@ -1,0 +1,13 @@
+package com.example.demo_project.service.ifs;
+
+import java.util.List;
+
+import com.example.demo_project.entity.Product;
+
+public interface ShoppingService {
+	
+	public void queryProducts(List<String> querynameList, List<Product> productList);  //
+	
+	public void checkout(List<Product> productList);  //
+
+}
